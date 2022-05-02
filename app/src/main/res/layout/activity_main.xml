@@ -46,20 +46,11 @@
             android:onClick="editSecond"
             android:text="edit_2"
             android:textColor="#05BDD5" />
-
     </LinearLayout>
 
-    <ScrollView
+    <ListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:id="@+id/listContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="#ccc"
-            android:orientation="vertical" />
-    </ScrollView>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
