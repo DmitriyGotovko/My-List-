@@ -2,35 +2,25 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.LinearLayout
 import android.widget.ListView
-import android.widget.TextView
-import com.github.javafaker.Faker
+import androidx.fragment.app.ListFragment
+import com.example.myapplication.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), MainView {
+class MainActivity : AppCompatActivity(){
 
-    private lateinit var listView: ListView
-
-    private val controller = MainController()
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        listView = findViewById(R.id.list_view)
-
-        controller.onViewReady(this)
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.list_container, ListFragment())
+                .commit()
+        }
     }
-
-    override fun displayList(users: List<User>) {
-        val newAdapter = UsersListAdapter(layoutInflater, users)
-        listView.adapter = newAdapter
-    }
-
-    fun addListItem(view: View?) = controller.onAddRandomClicked()
-    fun removeLast(view: View) = controller.onRemoveLastClicked()
-    fun removeAll(view: View) = controller.onRemoveAllClicked()
-    fun editSecond(view: View) = controller.onEditSecondClicked()
 }
