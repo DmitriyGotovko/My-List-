@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListView
 import com.example.myapplication.*
 import com.example.myapplication.databinding.FragmentListBinding
 
@@ -40,7 +39,5 @@ class ListFragment : Fragment(R.layout.fragment_list), MainView {
     override fun displayList(users: List<User>) {
         val newAdapter = UsersListAdapter(layoutInflater, users)
         binding.listView.adapter = newAdapter
-
-
     }
 }
