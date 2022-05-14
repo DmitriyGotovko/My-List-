@@ -2,4 +2,9 @@
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_textView_listFragment">Список:</string>
+    <string name="button_edit">edit_2</string>
+    <string name="button_remove_last">r_last</string>
+    <string name="button_remove_all">r_all</string>
+    <string name="button_add">add</string>
 </resources>

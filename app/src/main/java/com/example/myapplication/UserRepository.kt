@@ -10,7 +10,7 @@ object UserRepository {
 
     init {
         val list = mutableListOf<User>()
-        repeat(10) {
+        repeat(5) {
             addRandomUser()
         }
     }

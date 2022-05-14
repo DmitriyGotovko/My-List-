@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="@dimen/padding_16">
 
     <TextView
         android:id="@+id/userFullNameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000"
+        android:textColor="@color/color_gray"
         android:textSize="@dimen/text_size_20"
         tools:text="Имя Фамилия" />
 
@@ -20,9 +20,9 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textColor="#444"
+        android:textColor="@color/color_gray"
         android:textSize="@dimen/text_size_20"
-        tools:text="Apt. 527 9463 Laci Rest, New Francene, NM 91294" />
+        tools:text="Адрес" />
 
 
 </LinearLayout>

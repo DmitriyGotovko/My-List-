@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.ListFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Fragments.ListFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Список:"
-        android:textColor="#000"
+        android:text="@string/title_textView_listFragment"
+        android:textColor="@color/black"
         android:textSize="@dimen/text_size_20" />
 
     <LinearLayout
@@ -21,34 +21,39 @@
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="add"
-            android:textColor="#05BDD5" />
+            android:text="@string/button_add"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/button_removeAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="r_all"
-            android:textColor="#05BDD5" />
+            android:text="@string/button_remove_all"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/button_removeLast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="r_last"
-            android:textColor="#05BDD5" />
+            android:text="@string/button_remove_last"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/button_editSecond"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="edit_2"
-            android:textColor="#05BDD5" />
+            android:text="@string/button_edit"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@color/white" />
 
 </LinearLayout>
