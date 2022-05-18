@@ -7,4 +7,8 @@
     <string name="button_remove_last">r_last</string>
     <string name="button_remove_all">r_all</string>
     <string name="button_add">add</string>
+    <string name="menu_add_item">Добавить</string>
+    <string name="menu_delete_all">Удалить все</string>
+    <string name="menu_delete_last">Удалить последний</string>
+    <string name="menu_edit_second">Редактировать</string>
 </resources>
