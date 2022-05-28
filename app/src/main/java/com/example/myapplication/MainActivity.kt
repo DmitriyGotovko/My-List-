@@ -2,9 +2,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import com.example.myapplication.fragments.ListFragment
+import com.example.myapplication.screenUserList.ListFragment
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.list_container, ListFragment())
+                .add(R.id.fragmentListContainer, ListFragment(), "tag1")
                 .commit()
         }
     }

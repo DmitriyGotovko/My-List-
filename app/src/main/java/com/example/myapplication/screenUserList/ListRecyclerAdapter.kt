@@ -1,15 +1,17 @@
-package com.example.myapplication
+package com.example.myapplication.screenUserList
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.User
 import com.example.myapplication.databinding.ListItemBinding
 
-class RecyclerAdapter(
+class ListRecyclerAdapter(
     private val layoutInflater: LayoutInflater,
     private val users: List<User>
-) : RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
+) : RecyclerView.Adapter<ListRecyclerAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = layoutInflater.inflate(R.layout.list_item, parent, false)
@@ -17,10 +19,10 @@ class RecyclerAdapter(
         return viewHolder
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(view: MyViewHolder, position: Int) {
         val item = users[position]
 
-        ListItemBinding.bind(holder.itemView).apply {
+        ListItemBinding.bind(view.itemView).apply {
             userFullNameTextView.text = item.firstName + " " + item.lastName
             userAddressTextView.text = item.address
         }
